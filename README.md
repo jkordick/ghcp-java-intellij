@@ -4,7 +4,9 @@
 
 This is a Java and IntelliJ IDEA adaptation of the [ghcp-advanced](https://github.com/jkordick/ghcp-advanced) workshop.
 
-👉 **Read the workshop: [`docs/workshop.md`](docs/workshop.md)**
+👉 **[Open workshop on moaw.dev](https://aka.ms/ws?src=gh:jkordick/ghcp-java-intellij/main/docs/workshop.md)**
+
+> Or read the raw markdown: [`docs/workshop.md`](docs/workshop.md)
 
 ## What you'll learn
 
