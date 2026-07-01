@@ -12,7 +12,7 @@ This is a documentation/workshop repository. The deliverable is `docs/workshop.m
 
 ## What this repo intentionally does NOT do
 
-- It does not ship runnable application code. The "Rubber Duck Emporium" example in Chapter 2 is meant to be built by the reader, *with Copilot*, using the user stories in `user-stories/` as input to the SDD loop.
+- It does only ship runnable example application code. The "Rubber Duck Emporium" example in Chapter 2 is meant to be fully built by the reader, *with Copilot*, using the user stories in `user-stories/` as input to the SDD loop.
 - It does not pin specific Copilot UI labels — the product evolves; describe features by capability, not by exact menu names.
 
 ## Style

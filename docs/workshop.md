@@ -1,29 +1,27 @@
 ---
 published: true
 type: workshop
-title: "GitHub Copilot Advanced: Spec-Driven Development and beyond (Java / IntelliJ edition)"
-short_title: "GitHub Copilot Advanced: SDD and beyond — Java"
+title: "GitHub Copilot in IntelliJ"
+short_title: "GitHub Copilot in IntelliJ"
 description: Learn the fundamentals of GitHub Copilot in IntelliJ IDEA and then go deep on Spec-Driven Development (SDD), the discipline of letting specifications drive your AI-assisted Java code.
 level: intermediate
 authors:
   - Julia Kordick
-  - Artur Speth
 contacts:
   - "@jkordick"
-  - "@aspeth"
 duration_minutes: 240
 tags: GitHub, Copilot, AI, Spec-Driven Development, SDD, Java, Spring Boot, Maven, IntelliJ
 navigation_levels: 3
 navigation_numbering: true
 ---
 
-# GitHub Copilot Advanced: Spec-Driven Development and beyond (Java / IntelliJ)
+# GitHub Copilot in IntelliJ
 
-*Version 1.0 — June 2026 · Java / IntelliJ edition*
+*Version 1.0 — July 2026*
 
 Welcome! This workshop is a Java / IntelliJ IDEA adaptation of the [ghcp-advanced](https://github.com/jkordick/ghcp-advanced) workshop. It has the following parts:
 
-1. **Getting Started with GitHub Copilot**: a broad chapter for anyone who has never (or barely) used GitHub Copilot in IntelliJ IDEA. Covers inline completions, Chat, Agent mode, the Copilot CLI, custom instructions, prompt files, skills and MCP servers.
+1. **Getting Started with GitHub Copilot**: a broad chapter for anyone who has never (or barely) used GitHub Copilot (in IntelliJ IDEA). Covers inline completions, Chat, Agent mode, the Copilot CLI, custom instructions, prompt files, skills and MCP servers.
 2. **Spec-Driven Development (SDD)**: Learn how to make specifications drive what GitHub Copilot builds for you — end-to-end on a Java / Spring Boot feature.
 3. **Introduction of [spec-kit](https://github.com/github/spec-kit)** as a tool to use spec-driven development conveniently with most agentic coding tools.
 
@@ -79,7 +77,7 @@ You need the following before starting:
 
 ### Install the plugin
 
-Open IntelliJ IDEA and go to **Settings / Preferences → Plugins → Marketplace**, search for **GitHub Copilot** and install it. Restart the IDE. Sign in with your GitHub account via **Tools → GitHub Copilot → Sign In**.
+Open IntelliJ IDEA and go to **Settings → Plugins **, search for **GitHub Copilot** and install it. Restart the IDE. Sign in with your GitHub account via **Tools → GitHub Copilot → Sign In**.
 
 You will use four surfaces:
 
@@ -291,36 +289,13 @@ There are 9 stories. A realistic ~90–120 minute run completes the full applica
 
 ### 2.2.1 Scaffold
 
-**Option A — IntelliJ Spring Initializr (recommended)**
+**IntelliJ Spring Initializr (recommended)**
 
 1. Open IntelliJ IDEA and choose **File → New → Project**.
-2. Select **Spring Initializr**.
+2. Select Java.
 3. Configure:
-   - **Language:** Java
-   - **Type:** Maven
-   - **Group:** `com.duckemporium`
-   - **Artifact:** `duck-emporium`
-   - **Java:** 21
-4. Add dependencies: **Spring Web**, **Spring Data JPA**, **H2 Database**.
-5. Click **Create**. IntelliJ opens the project directly.
-6. Create a `specs/` folder at the project root.
-
-**Option B — Spring Initializr CLI**
-
-```bash
-curl https://start.spring.io/starter.zip \
-  -d dependencies=web,data-jpa,h2 \
-  -d language=java \
-  -d javaVersion=21 \
-  -d artifactId=duck-emporium \
-  -d groupId=com.duckemporium \
-  -d name=duck-emporium \
-  -o duck-emporium.zip
-unzip duck-emporium.zip -d duck-emporium
-cd duck-emporium
-mkdir specs
-git init && git add -A && git commit -m "scaffold project"
-```
+![scaffolding](../assets/scaffolding.png)
+5. Click **Create**. Stay in this IntelliJ window.
 
 Open the `duck-emporium/` folder in IntelliJ.
 
@@ -342,11 +317,11 @@ Add a minimal `AGENTS.md` in the `duck-emporium/` folder:
 
 ### 2.2.2 Add the SDD prompt files
 
-All prompts assume you run them from inside the `duck-emporium/` folder. They use a `${input:storyId}` placeholder — IntelliJ (or the CLI) will prompt you for the story ID when you invoke them.
+All prompts assume you run them from inside the `duck-emporium/` folder. They use a `${input:storyId}` placeholder — GHCP will prompt you for the story ID when you invoke them.
 
 <div class="tip" data-title="Remember!">
 
-> Create prompt files manually or via **Tools → GitHub Copilot → New Prompt File…** and copy-paste the content below.
+> Create prompt files manually in the `.github/prompts/` folder and copy-paste the content below.
 
 </div>
 

@@ -1,6 +1,6 @@
 # ghcp-java-intellij
 
-**An advanced GitHub Copilot tutorial focused on Spec-Driven Development (SDD) — Java / IntelliJ edition.**
+**A GitHub Copilot tutorial/workshop/lab focused on IntelliJ IDEA and Spec-Driven Development (SDD).**
 
 This is a Java and IntelliJ IDEA adaptation of the [ghcp-advanced](https://github.com/jkordick/ghcp-advanced) workshop.
 
@@ -31,7 +31,7 @@ This is a Java and IntelliJ IDEA adaptation of the [ghcp-advanced](https://githu
 - IntelliJ IDEA (Community or Ultimate) with the **GitHub Copilot** plugin
 - Java 21 JDK
 - Maven 3.9+
-- GitHub CLI (`gh`) and the `gh copilot` extension
+- [spec-kit](https://github.com/github/spec-kit)
 
 See [the Pre-requisites section of the workshop](docs/workshop.md#pre-requisites) for more details.
 
@@ -41,4 +41,4 @@ MIT
 
 ## Credits
 
-Based on [ghcp-advanced](https://github.com/jkordick/ghcp-advanced) by Julia Kordick & Artur Speth, itself inspired by the excellent [GitHub Copilot HoL by @Philess](https://moaw.dev/workshop/gh:Philess/GHCopilotHoL/main/docs/).
+Based on [ghcp-advanced](https://github.com/jkordick/ghcp-advanced) by Julia Kordick, itself inspired by the excellent [GitHub Copilot HoL by @Philess](https://moaw.dev/workshop/gh:Philess/GHCopilotHoL/main/docs/).
