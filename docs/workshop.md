@@ -535,6 +535,4 @@ In IntelliJ Chat (Agent mode) or in the Copilot CLI:
 
 Compare what spec-kit generates against the hand-rolled prompts from Chapter 2. You will recognize every step — spec-kit just removes the boilerplate and adds a bit of structure. The output (`spec.md`, `plan.md`, `tasks.md`) is identical in shape to what you wrote by hand.
 
----
-
 *That's it for this workshop edition. Happy spec-driven coding — and may your rubber ducks always have opinions about your code.* 🦆
